@@ -1,6 +1,7 @@
 import random
 from play_game import play_game
 from strategies import always_cooperate, always_defect, tit_for_tat, always_random
+#from strategies import *
 
 #run seed so results are reproducible for random strategy
 random.seed(42)

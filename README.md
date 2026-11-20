@@ -6,7 +6,8 @@ a number of rounds against each other, and the total score for each is returned.
 ## Files
 
 - `game_rules.py`: the moves (cooperate/defect) and the payoff table
-- `strategies.py`: the strategies (always cooperate, always defect, tit-for-tat, random)
+- `strategies.py`: the strategies (always cooperate, always defect, tit-for-tat, random) 
+-- For 'random' strategy make sure to `import random`
 - `play_game.py`: `play_game(strategy1, strategy2, rounds, game)` plays two strategies against each other
 - `run_games.py`: runs example games with a fixed random seed and records the results
 - `test_game.py`: tests that check the functions work as expected
@@ -26,13 +27,14 @@ returns `COOPERATE` or `DEFECT`. Add it to `strategies.py` and pass it to `play_
 from play_game import play_game
 from strategies import tit_for_tat, always_defect
 
+#example game tit-for-tat vs always defect
 play_game(tit_for_tat, always_defect, 10)   # returns (9, 14)
 ```
 
 ## Results
 
-The random seed is fixed at 42, so these results are the same on every run:
+All game results are reproducible.
+The random seed is fixed at 42, so these random results are the same on every run:
 
-- Tit-for-tat vs always-defect, 10 rounds: (9, 14)
 - Tit-for-tat vs random, 10 rounds: (28, 28)
 
