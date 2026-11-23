@@ -16,7 +16,7 @@ def play_game(strategy1, strategy2, rounds, game=standard_game):
         move2 = strategy2(player2_history, player1_history)
 
         #look up the payoffs for this combination of moves
-        score1, score2 = game[(move1, move2)]
+        score1, score2 = game[move1][move2] #the only change in this function - fetching from matrix instead of dict
 
         #add this round's payoffs to the totals
         player1_score += score1
